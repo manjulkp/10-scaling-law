@@ -1,0 +1,16 @@
+[project]
+name = "scaling-law"
+version = "0.1.0"
+description = "A miniature Chinchilla experiment: how to split a compute budget between model size and data"
+requires-python = ">=3.12"
+dependencies = ["tiny-gpt"]
+
+[tool.uv.sources]
+tiny-gpt = { path = "../04-tiny-gpt", editable = true }
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
